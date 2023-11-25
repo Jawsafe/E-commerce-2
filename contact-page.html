@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce 2 - About</title>
+
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="main-styles.css">F
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        input[type="number"] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <section id="header">
+        <a href="#"><img src="https://jawsafe.github.io/my-photos/e-commerce/image1/logo.png" alt="."></a>
+        <div>
+            <ul id="navbar">
+                <li class="text-capitalize"><a href="main-page.html" class="">home</a></li>
+                <li class="text-capitalize"><a href="shop-page.html" class="">shop</a></li>
+                <li class="text-capitalize"><a href="blog-page.html" class="">blog</a></li>
+                <li class="text-capitalize"><a href="about-page.html" class="">about</a></li>
+                <li class="text-capitalize"><a href="#" class="active">contacts</a></li>
+                <li><a href="cart-page.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart-page.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-bars"></i>
+        </div>
+    </section>
+
+    <!-- Page-header section -->
+    <section id="page-header" class="contact-header">
+        <h2 class="text-capitalize">contact us</h2>
+        <p class="text-capitalize">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    </section>
+
+    <!-- Contact-details section -->
+    <section id="contact-details">
+        <div class="details">
+            <span class="text-uppercase">Contact us</span>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+            <h3>Head Office - </h3>
+            <div>
+                <ul>
+                    <li>
+                        <strong>Address</strong>
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <p>1847 Santa Rita St, Makati, Metro Manila, 9312635</p>
+                    </li>
+                    <li>
+                        <strong>Number</strong>
+                        <i class="fa-solid fa-phone"></i>
+                        <p>907-723-2111</p>
+                    </li>
+                    <li>
+                        <strong>Store Hours</strong>
+                        <i class="fa-solid fa-clock"></i>
+                        <p>9:00 AM - 10:00 PM, Mon - Sat</p>
+                    </li>
+                    <li>
+                        <strong>Email</strong>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>adi.nugroho@email.com</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.677619806277!2d121.04275969999993!3d14.560419000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c857d773627f%3A0xb039abcaed1078a8!2s1847%20Santa%20Rita%20St%2C%20Makati%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1700877244544!5m2!1sen!2sph"
+                width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="maps"></iframe>
+        </div>
+    </section>
+
+    <!-- Form section -->
+    <section id="form-details">
+        <form action="">
+            <span class="text-capitalize">leave us with a feeback</span>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="text" name="e-mail" id="e-mail" placeholder="Email">
+            <input type="number" name="number" id="number" placeholder="Number (optional)" minlength="11"
+                oninput="validateInput(this)">
+            <textarea name="t-area" id="t-" cols="30" rows="10" placeholder="Message"></textarea>
+            <button type="button" class="">Submit</button>
+        </form>
+
+        <div id="reviews" class="">
+            <h2 class="text-capitalize">Customer reviews</h2>
+            <hr>
+            <div class="box-container">
+                <div class="box">
+                    <img src="https://jawsafe.github.io/my-photos/e-commerce/image2/user-1.png" alt="." />
+                    <div class="user-review">
+                        <h4>Some name</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://jawsafe.github.io/my-photos/e-commerce/image2/user-3.png" alt="." />
+                    <div class="user-review">
+                        <h4>Some name</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://jawsafe.github.io/my-photos/e-commerce/image2/user-2.png" alt="." />
+                    <div class="user-review">
+                        <h4>Some name</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://jawsafe.github.io/my-photos/e-commerce/image2/user-1.png" alt="." />
+                    <div class="user-review">
+                        <h4>Some name</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://jawsafe.github.io/my-photos/e-commerce/image2/user-3.png" alt="." />
+                    <div class="user-review">
+                        <h4>Some name</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="https://jawsafe.github.io/my-photos/e-commerce/image2/user-2.png" alt="." />
+                    <div class="user-review">
+                        <h4>Some name</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter">
+        <div class="text-news">
+            <h4 class="text-capitalize">Subscribe on our newsletter</h4>
+            <p>Recieve email updates about our latest products and <span>special promos</span></p>
+        </div>
+        <div class="form">
+            <input type="email" id="email" placeholder="Email Address">
+            <button type="button">Sign up</button>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact">
+        <div class="col">
+            <img class="logo" src="https://jawsafe.github.io/my-photos/e-commerce/image1/logo.png" alt=".">
+            <h4>Contacts</h4>
+            <p class="text-capitalize"><strong>Address: </strong>1847 Santa Rita St, Makati, Metro Manila, 9312635</p>
+            <p class="text-capitalize"><strong>Contact number: </strong>907-723-2111</p>
+            <p class="text-capitalize"><strong>Store hours: </strong>9:00 AM - 10:00 PM, Mon - Sat</p>
+            <p><strong>Email Address: </strong>adi.nugroho@email.com</p>
+
+            <div class="social-icon">
+                <h4 class="text-capitalize">Follow us</h4>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-x-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#" class="text-capitalize">About us</a>
+            <a href="#" class="text-capitalize">Services information</a>
+            <a href="#" class="text-capitalize">privacy & policy</a>
+            <a href="#" class="text-capitalize">terms and conditions</a>
+            <a href="#" class="text-capitalize">support</a>
+        </div>
+        <div class="col">
+            <h4>Account</h4>
+            <a href="#" class="text-capitalize">Sign in</a>
+            <a href="#" class="text-capitalize">Cart</a>
+            <a href="#" class="text-capitalize">Wishlists</a>
+            <a href="#" class="text-capitalize">Order tracker</a>
+            <a href="#" class="text-capitalize">help</a>
+        </div>
+        <div class="col">
+            <h4>Shopping</h4>
+            <a href="#" class="text-capitalize">men's</a>
+            <a href="#" class="text-capitalize">women's</a>
+            <a href="#" class="text-capitalize">kid's</a>
+            <a href="#" class="text-capitalize">sales & discounts</a>
+        </div>
+        <div class="col">
+            <h4>Guide</h4>
+            <a href="#" class="text-capitalize">shopping & returns guide</a>
+            <a href="#" class="text-capitalize">size guide</a>
+            <a href="#" class="text-capitalize">affiliates</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <!-- <div class="m-app">
+            <h4>Mobile App</h4>
+            <p>Available in App Store and Google Play</p>
+            <div class="row">
+                <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/pay/app.jpg" alt="apple">
+                <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/pay/play.jpg" alt="google">
+            </div>
+            <p class="text-capitalize">payment gateways</p>
+            <img src="https://jawsafe.github.io/my-photos/e-commerce/image3/payment.png" alt="pay">
+        </div> -->
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <h3>Sample project by <a href="#">Jawsafe</a></h3>
+    </section>
+
+    <script src="main-script.js"></script>
+</body>
+
+</html>

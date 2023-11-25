@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce 2 - Shop</title>
+
+    <!-- CSS styles -->
+    <link rel="stylesheet" href="main-styles.css">F
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <section id="header">
+        <a href="#"><img src="https://jawsafe.github.io/my-photos/e-commerce/image1/logo.png" alt="."></a>
+        <div>
+            <ul id="navbar">
+                <li class="text-capitalize"><a href="main-page.html" class="">home</a></li>
+                <li class="text-capitalize"><a href="shop-page.html" class="active">shop</a></li>
+                <li class="text-capitalize"><a href="blog-page.html" class="">blog</a></li>
+                <li class="text-capitalize"><a href="about-page.html" class="">about</a></li>
+                <li class="text-capitalize"><a href="contact-page.html" class="">contacts</a></li>
+                <li><a href="cart-page.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart-page.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-bars"></i>
+        </div>
+    </section>
+
+    <!-- Product Details -->
+    <section id="prod-details" class="">
+        <div class="single-prod-image">
+            <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/products/f2.jpg" alt="." width="100%" id="MainImg">
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/products/f2.jpg" alt="." width="100%" class="smallImg">
+                </div>
+                <div class="small-img-col">
+                    <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/products/f3.jpg" alt="." width="100%" class="smallImg">
+                </div>
+                <div class="small-img-col">
+                    <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/products/f4.jpg" alt="." width="100%" class="smallImg">
+                </div>
+                <div class="small-img-col">
+                    <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/products/f5.jpg" alt="." width="100%" class="smallImg">
+                </div>
+            </div>
+        </div>
+        <div class="prod-description">
+            <h6>Product: Polo T-shirt</h6>
+            <h3 class="">Polo T-shirt (Men)</h3>
+            <h2>₱2579.89</h2>
+            <select name="size" id="size" class="">
+                <option value="" disabled selected>Select Size</option>
+                <option value="">X-Small</option>
+                <option value="">Small</option>
+                <option value="">Medium</option>
+                <option value="">Large</option>
+                <option value="">X-large</option>
+            </select>
+            <input type="number" name="quantity" id="quantity" value="1" min="1">
+            <button type="button" class="">Add to cart</button>
+            <h4 class="">Product Details: </h4>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+        </div>
+    </section>
+
+    <!-- New arrivals -->
+    <section id="new">
+        <h2 class="text-capitalize ">Featured products</h2>
+        <hr class="mx-auto">
+        <p class="text-capitalize "><span>summer collection -</span> great modern style</p>
+        <div class="container">
+            <div class="product">
+                <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/products/n6.jpg" alt=".">
+                <div class="description">
+                    <span class="text-capitalize">'brand'</span>
+                    <h5 class="text-capitalize">featured product</h5>
+                    <div class="rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₱2579.89</h4>
+                    <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/products/n2.jpg" alt=".">
+                <div class="description">
+                    <span class="text-capitalize">'brand'</span>
+                    <h5 class="text-capitalize">featured product</h5>
+                    <div class="rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₱2579.89</h4>
+                    <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/products/n4.jpg" alt=".">
+                <div class="description">
+                    <span class="text-capitalize">'brand'</span>
+                    <h5 class="text-capitalize">featured product</h5>
+                    <div class="rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₱2579.89</h4>
+                    <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/products/n3.jpg" alt=".">
+                <div class="description">
+                    <span class="text-capitalize">'brand'</span>
+                    <h5 class="text-capitalize">featured product</h5>
+                    <div class="rate">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₱2579.89</h4>
+                    <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section id="newsletter">
+        <div class="text-news">
+            <h4 class="text-capitalize">Subscribe on our newsletter</h4>
+            <p>Recieve email updates about our latest products and <span>special promos</span></p>
+        </div>
+        <div class="form">
+            <input type="email" id="email" placeholder="Email Address">
+            <button type="button">Sign up</button>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact">
+        <div class="col">
+            <img class="logo" src="https://jawsafe.github.io/my-photos/e-commerce/image1/logo.png" alt=".">
+            <h4>Contacts</h4>
+            <p class="text-capitalize"><strong>Address: </strong>1847 Santa Rita St, Makati, Metro Manila, 9312635</p>
+            <p class="text-capitalize"><strong>Contact number: </strong>907-723-2111</p>
+            <p class="text-capitalize"><strong>Store hours: </strong>9:00 AM - 10:00 PM, Mon - Sat</p>
+            <p><strong>Email Address: </strong>adi.nugroho@email.com</p>
+
+            <div class="social-icon">
+                <h4 class="text-capitalize">Follow us</h4>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-x-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#" class="text-capitalize">About us</a>
+            <a href="#" class="text-capitalize">Services information</a>
+            <a href="#" class="text-capitalize">privacy & policy</a>
+            <a href="#" class="text-capitalize">terms and conditions</a>
+            <a href="#" class="text-capitalize">support</a>
+        </div>
+        <div class="col">
+            <h4>Account</h4>
+            <a href="#" class="text-capitalize">Sign in</a>
+            <a href="#" class="text-capitalize">Cart</a>
+            <a href="#" class="text-capitalize">Wishlists</a>
+            <a href="#" class="text-capitalize">Order tracker</a>
+            <a href="#" class="text-capitalize">help</a>
+        </div>
+        <div class="col">
+            <h4>Shopping</h4>
+            <a href="#" class="text-capitalize">men's</a>
+            <a href="#" class="text-capitalize">women's</a>
+            <a href="#" class="text-capitalize">kid's</a>
+            <a href="#" class="text-capitalize">sales & discounts</a>
+        </div>
+        <div class="col">
+            <h4>Guide</h4>
+            <a href="#" class="text-capitalize">shopping & returns guide</a>
+            <a href="#" class="text-capitalize">size guide</a>
+            <a href="#" class="text-capitalize">affiliates</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <!-- <div class="m-app">
+            <h4>Mobile App</h4>
+            <p>Available in App Store and Google Play</p>
+            <div class="row">
+                <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/pay/app.jpg" alt="apple">
+                <img src="https://jawsafe.github.io/my-photos/e-commerce/image5/pay/play.jpg" alt="google">
+            </div>
+            <p class="text-capitalize">payment gateways</p>
+            <img src="https://jawsafe.github.io/my-photos/e-commerce/image3/payment.png" alt="pay">
+        </div> -->
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <h3>Sample project by <a href="#">Jawsafe</a></h3>
+    </section>
+
+    <script src="main-script.js"></script>
+</body>
+
+</html>

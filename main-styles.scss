@@ -1,0 +1,1693 @@
+// Global variables
+$color1: #222;
+$color2: #694d4d;
+$color3: #e3e6f3;
+$color4: #1a1a1a;
+$color5: #d70d0dbb;
+$color6: #d70d0d;
+$color7: #e7d0cc;
+$color8: #d4e7cc;
+$color9: #08817f;
+$color10: #ffffff;
+$color11: rgb(241, 219, 190);
+$f-color1: #d1e8f2;
+$f-color2: #fddde4;
+$f-color3: #cdebbc;
+$f-color4: #cdd4f8;
+$f-color5: #f6dbf6;
+$f-color6: #fff2e5;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none !important;
+    font-family: 'Fira sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 50px;
+    color: $color1;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 40px;
+    color: $color1;
+}
+
+// h3 {
+//     font-size: 50px;
+//     line-height: 64px;
+//     color: $color1;
+// }
+
+h4 {
+    font-size: 20px;
+    color: $color1;
+}
+
+// h5 {
+//     font-size: 50px;
+//     line-height: 64px;
+//     color: $color1;
+// }
+
+h6 {
+    font-weight: 700;
+    color: $color1;
+}
+
+p {
+    // margin: 15px 0 15px;
+    font-size: 16px;
+    color: $color2;
+}
+
+@mixin section-p1 {
+    padding: 40px 40px;
+
+    hr {
+        width: 35%;
+        height: 2px;
+        // background-color: rgb(255, 65, 12);
+        border: 2px solid rgb(255, 12, 12);
+        border-radius: 5rem;
+    }
+}
+
+@mixin section-p2 {
+    padding: 5% 10%;
+
+    hr {
+        width: 35%;
+        height: 2px;
+        // background-color: rgb(255, 65, 12);
+        border: 2px solid rgb(255, 12, 12);
+        border-radius: 5rem;
+    }
+}
+
+@mixin section-m1 {
+    margin: 40px 0;
+}
+
+@mixin button1 {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: whitesmoke;
+    background-color: $color5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s ease;
+    white-space: none;
+    height: 52px;
+
+    &:hover {
+        background-color: $f-color2;
+        color: $color6;
+    }
+}
+
+@mixin button2 {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 19px;
+    color: whitesmoke;
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+body {
+    width: 100%;
+}
+
+// Main Page
+#header {
+    position: fixed;
+    padding: 20px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: rgb(255, 249, 246);
+    border-bottom: 0.5px solid $color7;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    img {
+        height: 45px;
+        width: -moz-fit-content;
+        width: -webkit-fit-content;
+        width: fit-content;
+    }
+
+    &.sticky {
+        background: rgb(255, 249, 246);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        #navbar {
+            li {
+                a {
+                    color: $color4 !important;
+
+                    &:hover,
+                    &.active {
+                        color: $color5 !important;
+
+                        &::after {
+                            content: "";
+                            width: 33%;
+                            height: 3px;
+                            background: $color5 !important;
+                            position: absolute;
+                            bottom: -4px;
+                            left: 20px;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+
+        li {
+            padding: 0 20px;
+            position: relative;
+
+            a {
+                font-size: 22px;
+                font-weight: 600;
+                color: $color4;
+                // color: whitesmoke;
+                transition: 0.3s ease;
+
+                &:hover,
+                &.active {
+                    color: $color5;
+
+                    &::after {
+                        content: "";
+                        width: 33%;
+                        height: 3px;
+                        background: $color5;
+                        position: absolute;
+                        bottom: -4px;
+                        border-radius: 4px;
+                        left: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    #mobile {
+        display: none;
+        align-items: center;
+
+        i {
+            color: black;
+            font-size: 22px;
+            padding-left: 20px;
+        }
+    }
+}
+
+#home {
+    @include section-p2();
+    background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image3/banner/parallax.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% left 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    h4 {
+        font-style: oblique;
+        color: $color5;
+    }
+
+    h1 {
+        color: $color5;
+    }
+
+    p {
+        font-style: italic;
+    }
+
+    .shop-btn {
+        background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image5/button.png);
+        background-color: transparent;
+        color: $color6;
+        border: none;
+        padding: 14px 80px 14px 65px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 15px;
+
+        // &:hover,
+        // &:active {
+        //     &::after {
+        //         content: "";
+        //         width: 30%;
+        //         height: 2px;
+        //         background: $color5;
+        //         position: absolute;
+        //         bottom: -4px;
+        //         left: 20px;
+        //     }
+        // }
+    }
+}
+
+#feature {
+    @include section-p1();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .fe-box {
+        width: 180px;
+        text-align: center;
+        padding: 25px 15px;
+        box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.05);
+        border: 1px solid $color7;
+        border-radius: 20px;
+        margin: 15px;
+
+        &:hover {
+            box-shadow: 10px 10px 54px rgba(221, 190, 64, 0.1);
+            transform: scale(0.95);
+            transition: 0.4s ease;
+        }
+
+        &:nth-child(2) {
+            h6 {
+                background-color: $f-color2;
+            }
+        }
+
+        &:nth-child(3) {
+            h6 {
+                background-color: $f-color3;
+            }
+        }
+
+        &:nth-child(4) {
+            h6 {
+                background-color: $f-color4;
+            }
+        }
+
+        &:nth-child(5) {
+            h6 {
+                background-color: $f-color5;
+            }
+        }
+
+        &:nth-child(6) {
+            h6 {
+                background-color: $f-color6;
+            }
+        }
+
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        h6 {
+            padding: 9px 6px 8px;
+            line-height: 1;
+            border-radius: 20px;
+            color: $color5;
+            background-color: $f-color1;
+            text-transform: capitalize;
+        }
+    }
+}
+
+#shirt,
+#new {
+    @include section-p1();
+    text-align: center;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .product {
+        // height: 30%;
+        width: 23%;
+        min-width: 250px;
+        padding: 10px 20px;
+        margin: 15px 10px;
+        border: 1px solid $color11;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+        transition: 0.2 ease;
+        position: relative;
+
+        &:hover {
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        img {
+            padding-top: 10px;
+            height: 65%;
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .description {
+            text-align: start;
+            padding: 10px 0 0;
+            position: relative;
+
+            span {
+                color: $color2;
+                font-size: 16px;
+            }
+
+            h5 {
+                padding-top: 7px;
+                color: $color4;
+                font-size: 20px;
+            }
+
+            .rate {
+                i {
+                    font-size: 15px;
+                    color: goldenrod;
+                }
+            }
+
+            h4 {
+                padding-top: 7px;
+                font-size: 18px;
+                font-weight: 700;
+                color: $color9;
+            }
+
+            a {
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-weight: 550;
+                background-color: $color3;
+                color: $color5;
+                border: 1px solid $color7;
+                border-radius: 50px;
+                position: absolute;
+                bottom: 20px;
+                right: 0;
+
+                &:hover {
+                    transform: scale(1.2);
+                    transition: all 0.3s ease;
+                }
+            }
+
+        }
+    }
+}
+
+#banner {
+    @include section-m1();
+    @include section-p2();
+    width: 100%;
+    height: 50vh;
+    background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image1/banner-3.png);
+    background-position: top 70px center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    align-items: flex-start;
+    justify-content: center;
+
+    h4 {
+        color: $color2;
+        font-style: italic;
+        font-size: 25px;
+    }
+
+    h1 {
+        padding: 5px 0 15px;
+        color: $color4;
+
+        span {
+            color: $color5;
+        }
+    }
+
+    button {
+        @include button1();
+    }
+}
+
+#md-banner {
+    @include section-p1();
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .banner-box {
+        min-width: 49%;
+        height: 50vh;
+        background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image5/banner/b17.jpg);
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 30px;
+
+        &:nth-child(2) {
+            background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image5/banner/b10.jpg);
+        }
+    }
+
+    h4 {
+        color: $color10;
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    h2 {
+        color: $color10;
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    span {
+        color: $color10;
+        font-size: 16px;
+        font-weight: 500;
+        padding-bottom: 15px;
+    }
+
+    button {
+        @include button2();
+
+        &:hover {
+            background-color: rgb(238, 59, 59);
+            border: 1px solid rgb(238, 59, 59);
+        }
+    }
+}
+
+#sm-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 40px 40px;
+
+    .banner-box {
+        margin-bottom: 20px;
+        min-width: 32%;
+        height: 30vh;
+        background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image5/banner/b4.jpg);
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 20px;
+
+        &:nth-child(2) {
+            background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image5/banner/b18.jpg);
+        }
+
+        &:nth-child(3) {
+            background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image5/banner/b7.jpg);
+        }
+    }
+
+    h2 {
+        color: $color10;
+        font-size: 22px;
+        font-weight: 900;
+    }
+
+    h3 {
+        color: $color6;
+        font-size: 16px;
+        font-weight: 750;
+    }
+}
+
+#newsletter {
+    @include section-p1();
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image5/banner/b14.png);
+    background-position: 30% 30%;
+    background-color: $color1;
+
+    h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: whitesmoke;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 600;
+        color: #818ea0;
+
+        span {
+            color: blanchedalmond;
+        }
+    }
+
+    .form {
+        display: flex;
+        width: 40%;
+
+        input {
+            height: 3.2rem;
+            padding: 0 1.2rem;
+            font-size: 14px;
+            width: 70%;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            outline: none;
+        }
+
+        button {
+            @include button1();
+            height: 3.2rem;
+            border-radius: none !important;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            text-wrap: nowrap;
+        }
+    }
+}
+
+#contact {
+    @include section-p2();
+    // padding: 2% 10%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, auto));
+    gap: 4rem;
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // white-space: nowrap;
+        margin-bottom: 20px;
+
+        // &:nth-child(1) {
+        //     padding-right: 120px;
+        // }
+    }
+
+    .logo {
+        margin-bottom: 30px;
+        height: 45px;
+        width: -moz-fit-content;
+        width: -webkit-fit-content;
+        width: fit-content;
+
+    }
+
+    h4 {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 0 0 10px 0;
+        color: $color1;
+    }
+
+    a {
+        color: $color1;
+        font-size: 14px;
+        margin: 0 0 10px;
+
+        &:hover {
+            color: $color6;
+        }
+    }
+
+    .social-icon {
+        padding-top: 5px;
+
+        .icons {
+            i {
+                color: #5b4646;
+                cursor: pointer;
+                padding-right: 8px;
+
+                &:hover {
+                    color: $color6;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    padding: 1.2rem;
+    width: 100%;
+    background: black;
+
+    h3,
+    h5 {
+        text-align: center;
+        color: white;
+        padding-top: 0.4rem;
+    }
+
+    a {
+        color: #6c73f5;
+    }
+}
+
+// Shop page
+.shop-header {
+    padding-top: 5%;
+    background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image5/banner/b2.jpg);
+    width: 100%;
+    height: 35vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    h2,
+    p {
+        color: wheat;
+    }
+}
+
+#page {
+    // @include section-p2();
+    padding: 60px 0;
+    text-align: center;
+
+    a {
+        background-color: $color6;
+        color: whitesmoke;
+        padding: 15px 20px;
+        border-radius: 4px;
+        font-weight: 600;
+
+        &:hover {
+            background-color: $f-color2;
+            color: $color6;
+        }
+
+        i {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
+
+// Product details
+#prod-details {
+    @include section-p1();
+    display: flex;
+    padding-bottom: 5rem;
+
+    .single-prod-image {
+        padding-top: 50px;
+        width: 35%;
+        margin-right: 50px;
+        margin-bottom: 20px;
+
+        img {
+            margin: 3px;
+            border: 1px solid $color11;
+            border-radius: 25px;
+        }
+
+        .small-img-group {
+            display: flex;
+            justify-content: space-between;
+
+            .small-img-col {
+                flex-basis: 24%;
+                cursor: pointer;
+
+                img {
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+
+    .prod-description {
+        width: 50%;
+        margin: 10px 5px;
+        padding-top: 40px;
+
+        h6 {
+            // padding-top: 20px;
+            font-size: 21px;
+        }
+
+        h4 {
+            padding: 2rem 0 .5rem;
+        }
+
+        h3 {
+            padding: 24px 0;
+        }
+
+        h2 {
+            font-size: 26px;
+            padding-bottom: 20px;
+        }
+
+        select {
+            display: block;
+            margin: 18px 0;
+            padding: 5px 10px;
+        }
+
+        input {
+            margin-right: 10px;
+            width: 50px;
+            height: 49px;
+            padding-left: 10px;
+            font-size: 16px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        button {
+            @include button1();
+            height: 50px;
+            transition: all 0.3s ease;
+        }
+
+        p {
+            line-height: 25px;
+        }
+    }
+}
+
+// Blog page
+.blog-header {
+    padding-top: 5%;
+    background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image5/banner/b19.jpg);
+    width: 100%;
+    height: 35vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    h2,
+    p {
+        color: whitesmoke;
+    }
+}
+
+#blog {
+    // @include section-p1();
+    padding: 150px 150px 40px;
+
+    .blog-box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+            padding-bottom: 100px;
+        }
+
+        .blog-img {
+            width: 50%;
+            margin-right: 40px;
+        }
+
+        .blog-text {
+            width: 50%;
+
+            a {
+                font-size: 18px;
+                color: $color6;
+                font-weight: 700;
+                position: relative;
+                transition: 0.3s ease;
+
+                &:hover {
+                    color: $color7;
+
+                    &::after {
+                        content: "";
+                        width: 30%;
+                        height: 2px;
+                        background: $color7;
+                        position: absolute;
+                        bottom: -4px;
+                        left: 0px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+
+        h1 {
+            position: absolute;
+            top: -55px;
+            left: 0;
+            font-size: 70px;
+            font-weight: 700;
+            // color: $color7;
+            color: $f-color2;
+            z-index: -10;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+// About page
+.about-header {
+    padding-top: 5%;
+    background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image5/banner/b1.jpg);
+    width: 100%;
+    height: 35vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    h2,
+    p {
+        color: whitesmoke;
+    }
+}
+
+#about {
+    @include section-p2();
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 50%;
+        height: auto;
+    }
+
+    .about-text {
+        // width: 60%;
+        padding-left: 40px;
+    }
+
+    .scrolling-container {
+        overflow: hidden;
+        width: 100%;
+        outline: 2px solid black;
+
+        .scrolling-img {
+            padding-block: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    }
+
+    .scrolling-container[data-animated="true"] {
+        overflow: hidden;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        mask: linear-gradient(90deg,
+                transparent,
+                rgba(255, 246, 246, 0.726) 15%,
+                rgba(255, 246, 246, 0.726) 85%,
+                transparent);
+
+        .scrolling-img {
+            flex-wrap: nowrap;
+            animation: scrolling 20s linear infinite;
+            width: 100%;
+
+            img {
+                flex-shrink: 0;
+                height: 50%;
+                width: 20%;
+            }
+        }
+    }
+
+    @keyframes scrolling {
+        to {
+            transform: translateX(calc(-100% - 0.5rem));
+        }
+    }
+}
+
+#mobile-app {
+    @include section-p1;
+    transition: all 0.3s ease;
+
+    h1 {
+        color: $color2;
+    }
+
+    .app-container {
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    .video {
+        width: 70%;
+        height: 100%;
+        margin: 25px auto 0;
+
+        video {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+    }
+
+    .app-text {
+        margin-top: 15px;
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                border: 1.2px solid $color1;
+                border-radius: 5px;
+                justify-content: center;
+                margin: 5px;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.05);
+                    transition: 0.3s ease;
+                }
+            }
+        }
+
+    }
+}
+
+// Contact page
+.contact-header {
+    padding-top: 5%;
+    background-image: url(https://jawsafe.github.io/my-photos/e-commerce/image5/banner/b14.png);
+    background-color: #08817f;
+    background-position: 30% 30%;
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    h2,
+    p {
+        color: whitesmoke;
+    }
+}
+
+@mixin span-h2 {
+    span {
+        font-size: 1rem;
+    }
+
+
+    h2 {
+        font-size: 1.5rem;
+        line-height: 35px;
+        padding: 20px 0;
+    }
+}
+
+#contact-details {
+    @include section-p2();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .details {
+        width: 40%;
+        margin: 30px 0;
+        @include span-h2();
+
+        h3 {
+            font-size: 1.5rem;
+            padding-bottom: 15px;
+        }
+
+        ul {
+            li {
+                // display: flex;
+                padding: 10px 0;
+
+                i {
+                    font-size: 1rem;
+                    padding-right: 22px;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .map {
+        width: 55%;
+        height: 400px;
+        border: 3px solid $color1;
+        border-radius: 35px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 35px;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+#form-details {
+    @include section-p1();
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+    border: 3px solid gray;
+    border-radius: 0.5rem;
+
+    form {
+        // flex: 1;
+        width: 65%;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include span-h2();
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            outline: none;
+            margin: 0 0 20px;
+            border: 1px solid $color3;
+        }
+
+        button {
+            @include button1();
+        }
+    }
+
+    #reviews {
+        padding: 2%;
+        height: 700px;
+
+        hr {
+            margin: 20px;
+        }
+
+        .box-container {
+            padding: 13px 0;
+            width: 100%;
+            max-height: 90%;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .box {
+                width: 95%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 10px 5px;
+                padding: 10px 5px;
+                border: 1px solid gray;
+                border-radius: 0.5rem;
+
+                img {
+                    width: 5rem;
+                    height: 100%;
+                    object-fit: cover;
+                    margin: 15px 15px;
+                    border-radius: 0.5rem;
+                }
+
+                .user-review {
+                    margin: 15px 15px;
+
+                    h4 {
+                        display: flex;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #222;
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 14px;
+                        line-height: 25px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Shopping cart page
+#cart {
+    @include section-p1();
+    overflow-x: auto;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        white-space: nowrap;
+
+        img {
+            width: 55%;
+            border: 0.4px solid $f-color2;
+        }
+
+        td {
+            text-align: center;
+            width: 20%;
+
+            input {
+                width: 70px;
+                padding: 5px 15px;
+            }
+
+            i {
+                font-size: 1.5rem;
+            }
+        }
+
+        thead {
+            border-top: 1px solid $f-color2;
+            border-bottom: 1px solid $f-color2;
+
+            td {
+                font-weight: 700;
+                text-transform: uppercase;
+                font-size: 1rem;
+                padding: 18px 0;
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    padding: 0.5rem;
+                    font-size: 1rem;
+
+                    a {
+                        &:hover {
+                            i {
+                                color: $color5;
+                            }
+                        }
+                    }
+
+                    i {
+                        color: $color1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#coupon-checkout {
+    @include section-p1();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    #coupon {
+        width: 50%;
+        border: 1px solid transparent;
+        padding: 30px;
+
+        h3 {
+            padding-bottom: 15px;
+        }
+
+        input {
+            padding: 10px 20px;
+            outline: none;
+            width: 60%;
+            margin-right: 10px;
+            border: 1px solid $color3;
+            height: 52px;
+        }
+
+        button {
+            @include button1();
+        }
+    }
+
+    #checkout {
+        width: 50%;
+        border: 1px solid $color3;
+        padding: 30px;
+
+        h3 {
+            padding-bottom: 15px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+
+            td {
+                width: 50%;
+                border: 1px solid $color3;
+                padding: 10px;
+                font-size: 1rem;
+
+                select {
+                    width: 100%;
+                }
+            }
+        }
+
+        button {
+            @include button1();
+            float: right;
+        }
+    }
+}
+
+// Media Queries
+@media (max-width: 799px) {
+
+    // Main page
+    #header {
+        #navbar {
+            position: absolute;
+            top: 100%;
+            // position: fixed;
+            // top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            // height: -moz-fit-content;
+            // height: -webkit-fit-content;
+            // height: fit-content;
+            background: rgb(255, 249, 246);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start !important;
+            justify-content: flex-start !important;
+            padding: 40px 0 40px 15px;
+            box-shadow: 0 40px 60px rgba(0, 0, 0, 0.10);
+            transition: all 0.4s ease;
+
+            &.active {
+                right: 0px;
+            }
+
+            li {
+                // font-size: 30px;
+                display: block;
+                margin-bottom: 25px;
+            }
+        }
+
+        #mobile {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    #home {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 305 right 20%;
+    }
+
+    #feature {
+        justify-content: center;
+
+        .fe-box {
+            margin: 15px;
+        }
+    }
+
+    #shirt,
+    #new {
+        .container {
+            justify-content: center;
+
+            .product {
+                margin: 15px;
+
+                img {
+                    height: 220px;
+                }
+            }
+        }
+    }
+
+    #banner {
+        height: 30vh;
+    }
+
+    #md-banner {
+        .banner-box {
+            min-width: 100%;
+            height: 30vh;
+            margin: auto;
+            margin-top: 20px;
+        }
+    }
+
+    #sm-banner {
+        padding: 0 40px;
+
+        .banner-box {
+            width: 28%;
+        }
+    }
+
+    #newsletter {
+        .form {
+            width: 70%;
+        }
+    }
+
+    // Contact page
+    #form-details {
+        .box {
+            display: block !important;
+        }
+    }
+
+    // Shop page
+    #cart {
+        table {
+            td {
+                width: 200px;
+            }
+        }
+    }
+
+    #coupon-checkout {
+        justify-content: center;
+
+        #coupon {
+            input {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 477px) {
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    // Main page
+    #header {
+        padding: 20px 30px;
+
+        img {
+            height: 25px;
+        }
+    }
+
+    #home {
+        padding: 0 20px;
+        background-position: 45%;
+    }
+
+    #feature {
+        padding: 20px !important;
+        justify-content: space-between;
+
+        .fe-box {
+            width: 155px;
+            margin: 0 0px 15px;
+        }
+    }
+
+    #shirt,
+    #new {
+        padding: 20px !important;
+
+        .product {
+            // height: 30%;
+            width: 100% !important;
+        }
+    }
+
+    #banner {
+        height: 40vh;
+        background-position: 75%;
+
+        h4 {
+            font-size: 20px;
+        }
+
+        h1 {
+            padding: 0;
+        }
+
+        button {
+            font-size: 12px;
+            padding: 8px 16px;
+        }
+    }
+
+    #md-banner {
+        padding: 0 20px;
+
+        h4 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        span {
+            font-size: 14px;
+        }
+
+        button {
+            font-size: 11px;
+            padding: 8px 14px;
+        }
+
+        .banner-box {
+            margin-top: 20;
+            height: 35vh;
+        }
+    }
+
+    #sm-banner {
+        margin-top: 20px;
+        padding: 0 20px;
+
+        .banner-box {
+            width: 100%;
+        }
+    }
+
+    #newsletter {
+        padding: 40px 20px;
+
+        .form {
+            width: 100%;
+        }
+    }
+
+    #contact .col:nth-child(1) {
+        padding-right: 40px;
+    }
+
+    // Product Description page
+    #prod-details {
+        display: flex;
+        flex-direction: column;
+
+        .single-prod-image {
+            width: 100%;
+            margin-right: 0px;
+            padding-top: 0px;
+        }
+
+        .prod-description {
+            width: 100%;
+            padding-top: 0px;
+        }
+    }
+
+    // Blog page
+    #blog {
+        padding: 100px 20px 0;
+
+        .blog-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .blog-img {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 30px;
+
+            }
+
+            .blog-text {
+                width: 100%;
+            }
+        }
+    }
+
+    // About page
+    #about {
+        flex-direction: column;
+
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            padding-left: 0;
+        }
+    }
+
+    #mobile-app {
+        .video {
+            width: 100%;
+        }
+    }
+
+    // Contact page
+    #contact-details {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .details {
+            width: 100%;
+            margin: 30px 0;
+        }
+
+        .map {
+            width: 100%;
+        }
+    }
+
+    #form-details {
+        margin: 5%;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+
+        form {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+
+    // Shop page
+    #coupon-checkout {
+        flex-direction: column;
+
+        #coupon {
+            padding: 15px;
+            width: 100%;
+            
+            button {
+                float: right;
+            }
+        }
+
+        #checkout {
+            padding: 15px;
+            width: 100%;
+        }
+    }
+}
